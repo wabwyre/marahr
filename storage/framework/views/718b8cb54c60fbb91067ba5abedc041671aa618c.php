@@ -1,0 +1,139 @@
+<?php $__env->startSection("title"); ?>
+    HRM - Cloud HR Software for Small and Medium Businesses
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection("css"); ?>
+    <style type="text/css">
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+        .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        h1 {
+                text-align: cencdter;
+            }
+    </style>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection("content"); ?>
+
+    <section id="main-slider" class="no-margin">
+        <div class="carousel slide">
+            <div class="carousel-inner">
+                <div class="item active" style="background-image: url(<?php echo e(asset('assets/site/images/slider/dashboard_home_16002.jpeg')); ?>);">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1" style="text-shadow: 0 3px 6px rgba(0,0,0,0.2)">A Complete HR Management Solution that delivers</h1>
+                                    <h2 class="animation animated-item-2" style="text-shadow: 0 3px 6px rgba(0,0,0,0.2); margin: 18px 0; font-weight: 400;">companies in East Africa trust <?php echo e($setting->main_name?? 'HRM'); ?></h2>
+                                    
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+    </section><!--/#main-slider-->
+
+    
+    <section id="feature" >
+        <div class="container">
+           <div class="center wow fadeInDown">
+                <h2>Why you will <i class="fa fa-heart"></i> <?php echo e($setting->main_name?? 'HRM'); ?></h2>
+                <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p> -->
+            </div>
+
+            <div class="row">
+                <div class="features">
+                    <div class="col-md-6 col-sm-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-<?php echo e(strtolower($setting->currency)); ?>"></i>
+                            <h2>Pay Fixed Monthly</h2> 
+                            <h3>Don't pay per employee and skyrocket your monthly bills.</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-6 col-sm-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-thumbs-o-up"></i>
+                            <h2>Easy to Use</h2>
+                            <h3>Get started straightway and save yourself from spending hours figuring out how to do basic tasks</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+                    <div class="col-md-6 col-sm-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-mobile"></i>
+                            <h2>Mobile Friendly</h2>
+                            <h3>Access from any device - HRM works seamlessly on desktop, mobile and tablet</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+
+
+                    <div class="col-md-6 col-sm-12 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="feature-wrap">
+                            <i class="fa fa-rocket"></i>
+                            <h2>Ever Improving</h2>
+                            <h3>Our constant effort to make HRM better gives you new features regularly without any extra cost</h3>
+                        </div>
+                    </div><!--/.col-md-4-->
+                </div><!--/.services-->
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#feature-->
+
+
+
+    <section id="partner">
+        <div class="container">
+            <div class="center">
+                <h2>Our Customers</h2>
+                <p class="lead">Thousands of companies, from small businesses to enterprises use <?php echo e($setting->main_name); ?> everyday.</p>
+            </div>
+
+            
+        </div><!--/.container-->
+    </section><!--/#partner-->
+
+    <section>
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12">
+                    
+                    <div class="center">
+                        <h2 class="animation animated-item-2">For More Enquiries and Demo</h2>
+                        <h2 style ="color:blue;">Call Rose +254707218944-Business Development Lead</h2>
+                        <h2 style ="color:orange;">Call Carol +256757422191 Business Development South Sudan</h2>
+                        <h2 style ="color:blue;">Call Caroline +211925400038  Business Development Lead South Sudan</h2> 
+                        <h2>Get started today</h2> 
+                        <p class="lead">Sign Up and start using HRM for <b>FREE!</b> <em>No credit card required.</em></p>
+                        <form id="sign-up-form-1" method="post" class="form-inline" action="<?php echo e(route("signup")); ?>">
+                            <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>"/>
+                            <div class="form-group">
+                                <input type="text" name="email" class="form-control input-lg" required="required" placeholder="Your Email ID"/>
+                            </div>
+                            <input type="submit" name="submit" class="input-lg btn btn-primary" value="Sign Up"/>
+                        </form></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <h2>The Team</h2>
+    <img class="img-responsive" src="<?php echo e(asset('assets/site/images/dashboard_home_1600_4.jpeg')); ?>" width="100%" />
+    
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make("site.app", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /var/www/html/hr/resources/views/site/home.blade.php ENDPATH**/ ?>
