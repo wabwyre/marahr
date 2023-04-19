@@ -396,7 +396,11 @@
         function calculatePayee(gross) {
 
             let firstTax = 24000 * 0.1;
-            let taxable = gross - 200;
+            $gross = gross;
+            let nssf = getNssf($gross);
+            //alert(nssf);
+            //var_dump(nssf);
+            let taxable = gross - nssf;
             if(taxable > 32333){
                 paye = ((taxable - 32333)* 0.3 + (8333*0.25) + firstTax) - 2400
             }else if(taxable > 24000){
@@ -423,6 +427,20 @@
             $('#nssf-value').val(amount)
         }
 
+        function getNssf(gross){
+            let amount = 0;
+                switch (true) {
+                    case (gross < 18000):
+                        amount = gross * 0.06;
+                        break;
+                    case gross >= 18000 :
+                        amount = 1080;
+                        break;
+                    default :
+                        amount = 1080;
+                }
+            return amount;
+        }
         // function calculateNssf(gross){
         //     let nssfR = '{{ $company->nssf_rate }}';
         //     let amount = 200;
