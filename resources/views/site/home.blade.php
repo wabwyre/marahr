@@ -81,7 +81,7 @@
     <section id="feature" >
         <div class="container">
            <div class="center wow fadeInDown">
-                <h2>Why you will <i class="fa fa-heart"></i> {{ $setting->main_name?? 'HRM' }}</h2>
+                <h2>Why you will <i class="fa fa-heart"></i>HRM</h2>
                 <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p> -->
             </div>
 
